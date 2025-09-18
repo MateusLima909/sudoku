@@ -1,0 +1,25 @@
+{
+    "name": "Java & Maven",
+    "image": "mcr.microsoft.com/devcontainers/java:21",
+    "features": {
+        "ghcr.io/devcontainers/features/desktop-lite:1": {}
+    },
+    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y maven",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "redhat.java"
+            ]
+        }
+    },
+    "forwardPorts": [
+        5901
+    ],
+    "portsAttributes": {
+        "5901": {
+            "label": "GUI",
+            "protocol": "http",
+            "onAutoForward": "notify"
+        }
+    }
+}
